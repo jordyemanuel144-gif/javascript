@@ -54,3 +54,4 @@ es lo que necesitas para leer codigo de proyectos reales y de React.
 | 12 | `02-sintaxis/12-valores-opcionales.js` | `?.`, `??`, parametros por defecto |
 
 Se corrigen igual: `node verificar.js 09`, o `node verificar.js` para todo.
+# javascript
