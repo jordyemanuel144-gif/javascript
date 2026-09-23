@@ -1,0 +1,19 @@
+{
+  "name": "practica-js-ts-vue",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Curso propio de JavaScript, TypeScript y Vue 3 con corrector automatico",
+  "scripts": {
+    "js": "node verificar.js",
+    "ts": "tsx verificar-ts.ts",
+    "tipos": "tsc --noEmit -p tsconfig.json",
+    "b": "node --watch borrador.js",
+    "bt": "tsx --watch borrador.ts",
+    "repl": "node"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  }
+}

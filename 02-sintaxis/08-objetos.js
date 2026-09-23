@@ -29,7 +29,8 @@
 // hacerPersona("Ana", 30) -> { nombre: "Ana", edad: 30 }
 function hacerPersona(nombre, edad) {
   // TODO
-  return undefined;
+  const persona = { nombre: nombre, edad: edad}
+  return persona;
 }
 
 // EJERCICIO 2
@@ -37,7 +38,8 @@ function hacerPersona(nombre, edad) {
 // hacerPersonaCorto("Luis", 25) -> { nombre: "Luis", edad: 25 }
 function hacerPersonaCorto(nombre, edad) {
   // TODO
-  return undefined;
+  const persona = {nombre, edad}
+  return persona;
 }
 
 // EJERCICIO 3
@@ -45,7 +47,7 @@ function hacerPersonaCorto(nombre, edad) {
 // leerCiudad({ ciudad: "Lima" }) -> "Lima"
 function leerCiudad(persona) {
   // TODO
-  return undefined;
+  return persona["ciudad"];
 }
 
 // EJERCICIO 4
@@ -53,24 +55,22 @@ function leerCiudad(persona) {
 // Aqui el punto NO sirve: usa corchetes.
 // leerCampo({ edad: 30 }, "edad") -> 30
 function leerCampo(objeto, campo) {
-  // TODO
-  return undefined;
+  //considerando el campo como string
+  return objeto[campo];
 }
 
 // EJERCICIO 5
 // Agrega la propiedad "activo" con valor true al objeto y devuelvelo.
 // activar({ nombre: "Ana" }) -> { nombre: "Ana", activo: true }
 function activar(usuario) {
-  // TODO
-  return undefined;
+  usuario.activo = true;
 }
 
 // EJERCICIO 6
 // Devuelve un array con los NOMBRES de las propiedades del objeto.
 // nombresDeCampos({ a: 1, b: 2 }) -> ["a", "b"]
 function nombresDeCampos(objeto) {
-  // TODO
-  return undefined;
+  return Object.keys(objeto);
 }
 
 module.exports = { hacerPersona, hacerPersonaCorto, leerCiudad, leerCampo, activar, nombresDeCampos };

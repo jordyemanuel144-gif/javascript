@@ -1,0 +1,16 @@
+:root {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light dark;
+  --borde: #d0d0d8;
+  --tenue: #6b7280;
+}
+body { margin: 0; padding: 1.5rem; max-width: 900px; margin-inline: auto; }
+h1 { font-size: 1.4rem; }
+h2 { font-size: 1.1rem; margin-top: 2rem; }
+nav a { margin-right: 1rem; }
+nav a.router-link-active { font-weight: 700; text-decoration: none; }
+.caja { border: 1px solid var(--borde); border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+.tenue { color: var(--tenue); font-size: .9rem; }
+button { padding: .4rem .8rem; border-radius: 6px; border: 1px solid var(--borde); cursor: pointer; }
+input, select { padding: .4rem; border-radius: 6px; border: 1px solid var(--borde); }
+ul { padding-left: 1.2rem; }

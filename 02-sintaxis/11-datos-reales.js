@@ -25,15 +25,14 @@
 // soloNombres([{nombre:"Ana"},{nombre:"Luis"}]) -> ["Ana", "Luis"]
 function soloNombres(usuarios) {
   // TODO
-  return undefined;
+  return usuarios.map(u => u.nombre);
 }
 
 // EJERCICIO 2
 // Devuelve solo los usuarios cuyo campo activo sea true.
 // (No hace falta escribir === true; el campo YA es booleano.)
 function soloActivos(usuarios) {
-  // TODO
-  return undefined;
+  return usuarios.filter(u => u.activo);
 }
 
 // EJERCICIO 3
@@ -41,25 +40,21 @@ function soloActivos(usuarios) {
 // devuelve undefined solo, no tienes que hacer nada extra.
 // buscarPorId([{id:1},{id:2}], 2) -> {id:2}
 function buscarPorId(usuarios, id) {
-  // TODO
-  return undefined;
+  return usuarios.find(u => u.id === id);
 }
 
 // EJERCICIO 4
 // Devuelve true si HAY al menos un usuario mayor de la edad dada.
 // hayMayoresDe([{edad:20},{edad:40}], 30) -> true
 function hayMayoresDe(usuarios, edad) {
-  // TODO
-  return undefined;
+  return usuarios.some(u => u.edad > edad);
 }
-
 // EJERCICIO 5
 // Desestructura DENTRO de la flecha del map y devuelve textos.
 // Ej: [{nombre:"Ana", edad:30}] -> ["Ana (30)"]
 // Pista: usuarios.map(({ nombre, edad }) => ...)
 function comoTexto(usuarios) {
-  // TODO
-  return undefined;
+  return usuarios.map(({nombre, edad}) => `${nombre} (${edad})`);
 }
 
 // EJERCICIO 6
@@ -67,8 +62,9 @@ function comoTexto(usuarios) {
 // sus nombres. Se escribe uno detras del otro con puntos.
 // nombresDeActivos([{nombre:"Ana",activo:true},{nombre:"Luis",activo:false}]) -> ["Ana"]
 function nombresDeActivos(usuarios) {
-  // TODO
-  return undefined;
+  return usuarios.filter(u => u.activo).map(u => u.nombre);
+// si quisiera devolver objetos sería asi: 
+//return usuarios.filter(u => u.activo).map(u => {return ({nombre: u.nombre, activo: u.activo})});
 }
 
 module.exports = { soloNombres, soloActivos, buscarPorId, hayMayoresDe, comoTexto, nombresDeActivos };

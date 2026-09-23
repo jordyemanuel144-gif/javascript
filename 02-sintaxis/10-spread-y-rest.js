@@ -23,23 +23,21 @@
 // EJERCICIO 1
 // Devuelve una COPIA del array (no el mismo array).
 // copiar([1, 2]) -> [1, 2]  pero es otro array distinto
-const copiar = undefined; // TODO: hazlo como funcion flecha corta
+const copiar = (array) => [...array]; // TODO: hazlo como funcion flecha corta
 
 // EJERCICIO 2
 // Devuelve un array nuevo con el elemento agregado al final,
 // SIN usar push y sin modificar el original.
 // agregar([1, 2], 3) -> [1, 2, 3]
 function agregar(lista, elemento) {
-  // TODO
-  return undefined;
+  return [...lista, elemento];
 }
 
 // EJERCICIO 3
 // Une dos arrays en uno nuevo.
 // unir([1, 2], [3, 4]) -> [1, 2, 3, 4]
 function unir(a, b) {
-  // TODO
-  return undefined;
+  return [...a, ...b];
 }
 
 // EJERCICIO 4
@@ -47,8 +45,7 @@ function unir(a, b) {
 // sin modificar el original. (Asi se actualiza estado en React.)
 // cumplirAnios({ nombre: "Ana", edad: 30 }) -> { nombre: "Ana", edad: 31 }
 function cumplirAnios(persona) {
-  // TODO
-  return undefined;
+  return {...persona, edad: (persona.edad + 1)};
 }
 
 // EJERCICIO 5
@@ -56,16 +53,15 @@ function cumplirAnios(persona) {
 // gana la del segundo.
 // combinar({ a: 1, b: 2 }, { b: 9 }) -> { a: 1, b: 9 }
 function combinar(base, cambios) {
-  // TODO
-  return undefined;
+  return {...base, ...cambios};
 }
 
 // EJERCICIO 6
 // REST en parametros: recibe cualquier cantidad de numeros y
 // devuelve cuantos llegaron.
 // cuantos(1, 2, 3) -> 3   |   cuantos() -> 0
-function cuantos(/* TODO */) {
-  return undefined;
+function cuantos(...parametros) {
+  return parametros.length;
 }
 
 module.exports = { copiar, agregar, unir, cumplirAnios, combinar, cuantos };

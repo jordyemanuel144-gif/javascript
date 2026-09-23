@@ -30,15 +30,18 @@
 // Ej: presentar({ nombre: "Ana", edad: 30 }) -> "Ana tiene 30"
 function presentar(persona) {
   // TODO: usa  const { nombre, edad } = persona;  y un template literal
-  return undefined;
+  const { nombre, edad } = persona;
+  const texto = `${nombre} tiene ${edad}`;
+  return texto;
 }
 
 // EJERCICIO 2
 // Lo mismo, pero desestructurando EN EL PARAMETRO.
 // Fijate que la funcion sigue recibiendo un objeto completo.
 // presentarCorto({ nombre: "Luis", edad: 25 }) -> "Luis tiene 25"
-function presentarCorto(/* TODO: desestructura aqui */) {
-  return undefined;
+function presentarCorto({nombre, edad}) {
+  const texto = `${nombre} tiene ${edad}`;
+  return texto;
 }
 
 // EJERCICIO 3
@@ -46,8 +49,9 @@ function presentarCorto(/* TODO: desestructura aqui */) {
 // Devuelve t en mayusculas.
 // tituloEnMayusculas({ titulo: "hola" }) -> "HOLA"
 function tituloEnMayusculas(articulo) {
-  // TODO
-  return undefined;
+  const {titulo: t} = articulo;
+  const tituloConvertido = t.toUpperCase();
+  return tituloConvertido;
 }
 
 // EJERCICIO 4
@@ -56,7 +60,9 @@ function tituloEnMayusculas(articulo) {
 // colorDe({})               -> "azul"
 function colorDe(opciones) {
   // TODO
-  return undefined;
+  const {color = 'azul'} = opciones;
+
+  return color;
 }
 
 // EJERCICIO 5
@@ -65,8 +71,10 @@ function colorDe(opciones) {
 // primeroYTercero(["a", "b", "c"]) -> "a-c"
 // Pista: para saltarte una posicion, dejas el hueco vacio: const [x, , z] = ...
 function primeroYTercero(lista) {
-  // TODO
-  return undefined;
+  const [primero, ,tercero] = lista;
+
+  const texto = `${primero}-${tercero}`;
+  return texto;
 }
 
 // EJERCICIO 6
@@ -75,8 +83,8 @@ function primeroYTercero(lista) {
 // Desestructura en el parametro: texto, y color con defecto "gris".
 // Boton({ texto: "Enviar", color: "verde" }) -> "[verde] Enviar"
 // Boton({ texto: "Enviar" })                 -> "[gris] Enviar"
-function Boton(/* TODO */) {
-  return undefined;
+function Boton({texto, color = "gris"}) {
+  return `[${color}] ${texto}`;
 }
 
 module.exports = { presentar, presentarCorto, tituloEnMayusculas, colorDe, primeroYTercero, Boton };

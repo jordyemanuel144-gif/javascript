@@ -32,8 +32,9 @@
 // ciudadDe({ direccion: { ciudad: "Lima" } }) -> "Lima"
 // ciudadDe({})                                -> undefined
 function ciudadDe(usuario) {
-  // TODO
-  return undefined;
+  return usuario.direccion?.ciudad;
+  //Si no tiene ciudad: 
+  //return usuario.direccion?.ciudad?;
 }
 
 // EJERCICIO 2
@@ -42,8 +43,7 @@ function ciudadDe(usuario) {
 // nombreODefecto("Ana")  -> "Ana"
 // nombreODefecto(null)   -> "invitado"
 function nombreODefecto(nombre) {
-  // TODO
-  return undefined;
+  return nombre ?? "invitado";
 }
 
 // EJERCICIO 3
@@ -54,15 +54,15 @@ function nombreODefecto(nombre) {
 // cantidadO10(undefined) -> 10
 function cantidadO10(cantidad) {
   // TODO
-  return undefined;
+  return cantidad ?? 10;
 }
 
 // EJERCICIO 4
 // Parametro por defecto: si no pasan saludo, usa "Hola".
 // saludar("Ana")           -> "Hola, Ana"
 // saludar("Ana", "Buenas") -> "Buenas, Ana"
-function saludar(nombre /* TODO: agrega el segundo parametro con defecto */) {
-  return undefined;
+function saludar(nombre, saludo = "Hola") {
+  return `${saludo}, ${nombre}`;
 }
 
 // EJERCICIO 5
@@ -71,8 +71,7 @@ function saludar(nombre /* TODO: agrega el segundo parametro con defecto */) {
 // empresaDe({ trabajo: { empresa: "Acme" } }) -> "ACME"
 // empresaDe({})                               -> "SIN EMPRESA"
 function empresaDe(usuario) {
-  // TODO
-  return undefined;
+  return usuario.trabajo?.empresa.toUpperCase() ?? "SIN EMPRESA";
 }
 
 // EJERCICIO 6
@@ -82,8 +81,9 @@ function empresaDe(usuario) {
 // primerNombre([])                  -> undefined  (sin error)
 // Pista: lista[0]?.nombre
 function primerNombre(lista) {
-  // TODO
-  return undefined;
+  return lista[0]?.nombre;
+  //si el el objeto  esta como {} , osea no tiene nombre como sería
+  //return lista[0]?.nombre? 
 }
 
 module.exports = { ciudadDe, nombreODefecto, cantidadO10, saludar, empresaDe, primerNombre };
